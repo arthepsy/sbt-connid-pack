@@ -32,13 +32,14 @@ object ConnIdPackPlugin extends AutoPlugin {
 
   object autoImport {
     val ConnId: Configuration = config("connId").hide
-    val connIdVersion: SettingKey[String] = settingKey[String]("ConnID version to use")
+    val connIdVersion: SettingKey[String] =
+      settingKey[String]("ConnID version to use")
   }
 
   import autoImport._
   override def projectConfigurations: Seq[Configuration] = Seq(ConnId)
-  override lazy val projectSettings: Seq[Def.Setting[_]] = inConfig(ConnId)(
-    defaultSettings) ++ connIdSettings
+  override lazy val projectSettings: Seq[Def.Setting[_]] =
+    inConfig(ConnId)(defaultSettings) ++ connIdSettings
 
   def defaultSettings = Seq(
     connIdVersion := "1.4.2.35"
