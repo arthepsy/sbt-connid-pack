@@ -8,6 +8,7 @@ lazy val root = (project in file("."))
     sbtPlugin := true,
     crossSbtVersions := Seq("1.0.0", "0.13.16"),
 
+    git.baseVersion := "1.0",
     git.useGitDescribe := true,
     git.uncommittedSignifier := None,
 
