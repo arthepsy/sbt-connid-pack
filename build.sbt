@@ -3,6 +3,7 @@ lazy val root = (project in file("."))
   .settings(
     organization := "eu.arthepsy.sbt",
     name := "sbt-connid-pack",
+    description := "sbt plugin for packaging ConnId framework connector",
 
     sbtPlugin := true,
     crossSbtVersions := Seq("1.0.0", "0.13.16"),
