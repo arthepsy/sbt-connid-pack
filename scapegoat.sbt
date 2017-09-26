@@ -1,18 +1,18 @@
-scapegoatVersion in ThisBuild := "1.3.1"
+scapegoatVersion in ThisBuild := "1.3.2"
 
 val scapegoatAvailable = Def.setting {
   val versions = "sbt " + sbtVersion.value +
     ", cross-sbt " + (sbtVersion in pluginCrossBuild).value +
-    ", Scala " + scalaVersion.value
-  CrossVersion.partialVersion((sbtVersion in pluginCrossBuild).value) match {
-    case Some((1, 0)) => (true, versions)
-    case _            => (false, versions)
+    ", scala " + scalaVersion.value +
+    ", scala-binary " + scalaBinaryVersion.value
+  CrossVersion.partialVersion(scalaBinaryVersion.value) match {
+    case Some((2, 11)) => (true, versions)
+    case Some((2, 12)) => (true, versions)
+    case _             => (false, versions)
   }
 }
 
-libraryDependencies --= Seq(
-  "com.sksamuel.scapegoat" % "scalac-scapegoat-plugin_2.10" % scapegoatVersion.value % "compile"
-)
+libraryDependencies --= libraryDependencies.value.filter(_.name.startsWith("scalac-scapegoat-plugin"))
 
 libraryDependencies ++= {
   if (scapegoatAvailable.value._1) {
