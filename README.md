@@ -1,5 +1,6 @@
 # sbt-connid-pack
 
+[![Build Status](https://travis-ci.org/arthepsy/sbt-connid-pack.svg)](https://travis-ci.org/arthepsy/sbt-connid-pack)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/67ae6b7de7434fef85e8f8b12558aff7)](https://www.codacy.com/app/arthepsy/sbt-connid-pack)
 
 sbt plugin for packaging [ConnId](https://github.com/Tirasa/ConnId) (Connectors for Identity Management) framework connector, for example, can be used to package connectors for [midPoint](https://evolveum.com/midpoint) identity management platform.
