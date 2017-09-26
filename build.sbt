@@ -6,7 +6,7 @@ lazy val root = (project in file("."))
     description := "sbt plugin for packaging ConnId framework connector",
 
     sbtPlugin := true,
-    crossSbtVersions := Seq("1.0.0", "0.13.16"),
+    crossSbtVersions := Seq("1.0.2", "0.13.16"),
 
     git.baseVersion := "1.0",
     git.useGitDescribe := true,

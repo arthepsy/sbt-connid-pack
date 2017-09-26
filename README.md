@@ -12,7 +12,7 @@ Add the following line to `project/plugins.sbt`:
 addSbtPlugin("eu.arthepsy.sbt" %% "sbt-connid-pack" % "1.0.0")
 ```
 
-This plugin is released both for sbt 0.13.16 and sbt 1.0.0.
+This plugin is released both for sbt 0.13 and sbt 1.0.
 
 ## usage
 To enable the plugin:
